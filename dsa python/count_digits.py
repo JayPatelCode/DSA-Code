@@ -26,3 +26,17 @@
 
 # num=int(input("Enter number"))
 # print(int(log10(num)+1))
+
+
+
+
+n=589
+count=0
+rev=0
+while n:
+    last=n%10
+    # print(last)
+    rev=rev*10+last
+    print(rev,"REV")
+    n=n//10
+print(rev)

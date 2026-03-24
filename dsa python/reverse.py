@@ -1,14 +1,14 @@
-from collections import defaultdict
+# from collections import defaultdict
 
-num=int(input("Enter number"))
-reversed_num=0
-while num:
-    digit=num%10                 
-    reversed_num=reversed_num*10+digit
-    num=num//10               
+# num=int(input("Enter number"))
+# reversed_num=0
+# while num:
+#     digit=num%10                 
+#     reversed_num=reversed_num*10+digit
+#     num=num//10               
 
 
-print(reversed_num) 
+# print(reversed_num) 
 
 
 ##########LIST COMP###33333
@@ -39,3 +39,48 @@ print(reversed_num)
 #     print(c)
 #     str=c+str
 # print(str)
+
+
+
+###########################REVERSE##########3
+
+# s="the sky is blue"
+
+
+# words=s.split()
+# print(words)
+# words.reverse()
+# print(" ".join(words))
+
+
+
+
+# s="the sky is blue"
+
+# str=""
+# for i in s[::-1]:
+#     if i==" ":
+        
+#         str+=" "
+#     else:
+#         str+=i
+  
+# print(str)
+
+
+s="the sky is blue"
+
+str=""
+words=[]
+for i in s:
+    if i==" ":
+        words.append(str)
+        
+        str=" "
+    else:
+        str+=i
+words.append(str)
+
+words=words[::-1]
+print(words)
+print(" ".join(words))
