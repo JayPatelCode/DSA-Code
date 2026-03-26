@@ -24,15 +24,17 @@
 
 ##########count consonents ##############3333
 
-# word=input("Eneter string: ")
-# index=0
-# count=0
-# vowels="aeiou"
+word=input("Eneter string: ")
+index=0
+count=0
+vowels="aeiou"
 
-# while index < len(word):
-#     count=0
-#     for char in word:
-#         if char not in ["a","e","i","o","u"]:
-#             count+=1
-            
-#     print(count)
+while index < len(word):
+    print(index)
+    count=0
+    for char in word:
+        if char not in ["a","e","i","o","u"]:
+            count+=1
+        
+    print(count)
+    break

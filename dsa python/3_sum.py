@@ -1,4 +1,4 @@
-##################Brute###########
+# ##################Brute###########
 
 # arr=[-1,0,1,2,-1,-4]
 # n=len(arr)
@@ -12,6 +12,10 @@
 #                 st.add(tuple(temp))
 
 # print([list(ans) for ans in st])
+
+
+
+
 
 
 
@@ -40,36 +44,91 @@
 
 
 
-from typing import List
+# from typing import List
 
 
-class Solution:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
-        n=len(nums)
-        result=[]
-        nums.sort()
-        for i in range(n):
-            if i!=0 and nums[i]==nums[i-1]:
-                continue
+# class Solution:
+#     def threeSum(self, nums: List[int]) -> List[List[int]]:
+#         n=len(nums)
+#         result=[]
+#         nums.sort()
+#         for i in range(n):
+#             if i!=0 and nums[i]==nums[i-1]:
+#                 continue
 
-            j=i+1
-            k=n-1
+#             j=i+1
+#             k=n-1
 
-            while j<k:
-                total_sum=nums[i]+nums[j]+nums[k]
-                if total_sum<0:
-                    j+=1
-                elif total_sum>0:
-                    k-=1
-                else:
-                    temp=[nums[i],nums[j],nums[k]]
-                    result.append(temp)
-                    j+=1
-                    k-=1
+#             while j<k:
+#                 total_sum=nums[i]+nums[j]+nums[k]
+#                 if total_sum<0:
+#                     j+=1
+#                 elif total_sum>0:
+#                     k-=1
+#                 else:
+#                     temp=[nums[i],nums[j],nums[k]]
+#                     result.append(temp)
+#                     j+=1
+#                     k-=1
 
-                    while j<k and nums[j]==nums[j-1]:
-                        j+=1
+#                     while j<k and nums[j]==nums[j-1]:
+#                         j+=1
 
-                    while j<k and nums[k]==nums[k+1]:
-                        k-=1
-        return result
+#                     while j<k and nums[k]==nums[k+1]:
+#                         k-=1
+#         return result
+
+
+
+
+
+
+
+##################Brute###########
+
+# arr=[-1,0,1,2,-1,-4]
+# n=len(arr)
+# st=set()
+# for i in range(n):
+#     it=set()
+#     for j in range(i+1,n):
+#         target=-(arr[i]+arr[j])
+#         if target in it:
+#             temp=[arr[i],arr[j], target]
+#             temp.sort()
+#             st.add(tuple(temp))
+#         it.add(arr[j])
+
+
+# print([list(ans) for ans in st])
+
+
+
+
+
+
+arr=[-1,0,1,2,-1,-4]
+n=len(arr)
+ans=[]
+arr.sort()
+for i in range(n):
+    if i!=0 and arr[i-1]==arr[i]:
+        continue
+    j=i+1
+    k=n-1
+    while j<k:
+        total_sum=arr[i]+arr[j]+arr[k]
+        if total_sum>0:
+            k-=1
+        elif total_sum<0:
+            j+=1
+        else:
+            temp=[arr[i],arr[j],arr[k]]
+            ans.append(temp)
+            j+=1
+            k-=1
+            while j<k and arr[j]==arr[j-1]:
+                j+=1
+            while j<k and arr[k]==arr[k+1]:
+                k-=1
+print(ans)
