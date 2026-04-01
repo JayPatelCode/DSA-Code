@@ -21,6 +21,7 @@ for num in range(0,total_subset):#########0 to 7 here if n=3 and here subsets ar
     for i in range(n):
         if num & (1<<i)!=0:
             lst.append(nums[i])
+        print(lst)
     result.append(lst)
     # print(result)
 print(result)
