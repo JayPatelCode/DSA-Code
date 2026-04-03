@@ -70,21 +70,42 @@
 
 ##########Upper bound###33
 # smallest index such that nums[i]>target
+arr=[2,4,6,6,6,7,7,9,11,18,18,19]
+x=18
+n=len(arr)
+low=0
+high=n-1
+upperbound=-1
+while low<=high:
+    mid=(low+high)//2
+    if arr[mid]>x:
+        upperbound=mid
+        high=mid-1
+        
+    else:
+        low=mid+1
+
+print(upperbound)
+
+# TC:log2(N)
+
+
+#lower bound
 # arr=[2,4,6,6,6,7,7,9,11,18,18,19]
 # x=18
 # n=len(arr)
-# low=0
-# high=n-1
-# upperbound=-1
-# while low<=high:
-#     mid=(low+high)//2
+# l=0
+# h=n-1
+# lb=-1
+# while l<=h:
+#     mid=(l+h)//2
+   
 #     if arr[mid]>x:
-#         upperbound=mid
-#         high=mid-1
-        
+#         lb=mid
+#         h=mid-1
 #     else:
-#         low=mid+1
+#         l=mid+1
+# print(lb)
 
-# print(upperbound)
 
-# TC:log2(N)
+

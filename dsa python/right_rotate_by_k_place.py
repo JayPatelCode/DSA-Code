@@ -136,3 +136,38 @@
 # reverse(arr,0,n-1)
 
 # print(arr)
+
+
+###############Right rotate by k place######
+# arr=[1,4,6,8,9,4,2]
+# n=len(arr)
+# k=int(input("Enter value till you want to rotate: "))
+# for i in range(k):
+#     first_app=arr.pop()
+#     arr.insert(0,first_app)
+# print(arr)
+
+
+
+
+###############Left rotate by k place######
+# arr=[1,4,6,8,9,4,2]
+# n=len(arr)
+# k=int(input("Enter value till you want to rotate: "))
+# for i in range(k):
+#     last_app=arr.pop(0)
+#     arr.insert(n-1,last_app)
+# print(arr)
+
+
+
+
+
+
+
+arr=[1,4,6,8,9,4,2]
+n=len(arr)-1
+a=int(input("Enter by how many place you want to rotate array by left: "))
+
+arr[:]=arr[a:]+arr[0:a]
+print(arr)
